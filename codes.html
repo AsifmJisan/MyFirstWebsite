@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cstyle.css">
+    <title>Codes</title>
+</head>
+<body>
+    <nav class="nav">
+        <ham id="ham">
+            <div id="b1"></div>
+            <div id="b2"></div>
+            <div id="b3"></div>
+        </ham>
+        <ul type="none">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="codes.html">Codes</a></li>
+            <li><a href="games/cgame.html">SeeYourC</a></li>
+            <li><a href="https://codeforces.com/profile/AsifM">Codeforces</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+    <div id="bar">
+        <ul type="none">
+            <li><a href="index.html"><p>Home</p></a></li>
+            <li><a href=""><p>Coming Soon</p></a></li>
+            <li><a href=""><p>Coming Soon</p></a></li>
+            <li><a href=""><p>Coming Soon</p></a></li>
+            <li><a href=""><p>Coming Soon</p></a></li>
+            <li><a href=""><p>Coming Soon</p></a></li>
+        </ul>
+    </div>
+    <main>
+        <div id="place"></div>
+        <div class="gallary"><div class="label">Hello World</div>#include&lt;stdio.h&gt;<br><br>int main()<br>{<br>    printf("hello world");<br>}</div>
+        <div class="gallary"><div class="label">Input/Output</div>#include&lt;stdio.h&gt;<br><br>int main()<br>{<br>    int a;<br>    scanf("%d",&a);<br>    printf("%d",a);<br>}</div>
+        <div class="gallary"><div class="label">Bubble Sort</div>void BubbleSort(int a[], int n)<br>{<br>    int i, t, j;<br>    for(i=0;i&lt;n-1;i++)<br>    {<br>            for(j=0;j&lt;n-1;j++)<br>        {<br>            if(a[j]&gt;a[j+1])<br>            {<br>                t = a[j];<br>                a[j] = a[j+1];<br>                a[j+1] = t;<br>            }<br>        }<br>    }<br>}</div>
+        <div class="gallary"><div class="label">Quick Sort</div>void QuickSort(int a[], int s, int f)<br>{<br>    if(s&gt;=f) return;<br>    int i=s-1, j, t;<br>    for(j=s;j&lt;f;j++)<br>    {<br>        if(a[j]&lt;a[f])<br>        {<br>            t=a[++i];<br>            a[i]=a[j];<br>            a[j]=t;<br>        }<br>    }<br>    t=a[f];<br>    a[f]=a[++i];<br>    a[i]=t;<br>    QuickSort(a,s,i-1);<br>    QuickSort(a,i+1,f);<br>}</div>
+        <div class="gallary"><div class="label">Tic-Tac-Toe</div>#include&lt;stdio.h&gt;<br>#include&lt;ctype.h&gt;<br>int main()<br>{<br>    int r, c, f=0;<br>    char a[3][3], t;<br>    printf("\nTIC-TAC-TOE\n\tby Asif\n");<br>    for(int i=1;;i++)<br>    {<br>        if(i==1)<br>        {<br>            for(int i=0;i&lt;3;i++)<br>            {<br>                for(int j=0;j&lt;3;j++)<br>                a[i][j]=' ';<br>            }<br>        }<br>        printf("\n%c|%c|%c\n-----\n%c|%c|%c\n-----\n%c|%c|%c\n",a[0][0],a[0][1],a[0][2],a[1][0],a[1][1],a[1][2],a[2][0],a[2][1],a[2][2]);<br>        for(int i=0;i&lt;3;i++)<br>        {<br>            if((a[i][0]==a[i][1]&&a[i][1]==a[i][2]&&a[i][0]!=' ')||(a[0][i]==a[1][i]&&a[1][i]==a[2][i]&&a[0][i]!=' ')||(a[0][0]==a[1][1]&&a[1][1]==a[2][2]&&a[0][0]!=' ')||(a[0][2]==a[1][1]&&a[1][1]==a[2][0]&&a[0][2]!=' '))<br>            {<br>                f=1;<br>                break;<br>            }<br>        }<br>        if(f==1)<br>        {<br>            printf("\n%c is the WINNER!\n",t);<br>            here:;<br>            printf("\nWould you like to play again? [Y/n] ");<br>            scanf(" %c",&t);<br>            t = tolower(t);<br>            if(t=='n')<br>            {<br>                printf("Thanks for playing!");<br>                break;<br>            }<br>            else<br>            {<br>                i=0;<br>                f=0;<br>                continue;<br>            }<br>        }<br>        if(i==10)<br>        {<br>            printf("\nThe game is a Draw!\n");<br>            goto here;<br>        }<br>        if(i%2==0)<br>            t='X';<br>        else<br>            t='O';<br>        printf("Input Row for %c: ",t);<br>        scanf("%d",&r);<br>        printf("Input Column for %c: ",t);<br>        scanf("%d",&c);<br>        if(a[r-1][c-1]!=' ')<br>        {<br>            printf("\nThe cell is already occupied. Please choose a different cell.\n");<br>            i--;<br>        }<br>        else<br>            a[r-1][c-1]=t;<br>    }<br>}</div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+        <div class="gallary"><div class="label"></div></div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
